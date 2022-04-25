@@ -17,5 +17,5 @@ cat mars.txt
 git status
 git checkout f22b25e # gives error
 git checkout main # reattach
-!cat mars.txt
-!git log
+cat mars.txt
+git log
