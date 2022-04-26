@@ -14671,7 +14671,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a href="https://swcarpentry.github.io/git-novice/index.html">course link</a></p>
 <ul>
-<li>duration: 10 mins</li>
+<li>duration: 45 mins</li>
 <li>sync a local <code>Git</code> repository to <code>Github</code> hosting server</li>
 </ul>
 
@@ -14694,12 +14694,17 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create directory (works under jupyter, replace this block with bash in terminal)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create directory </span>
+<span class="c1"># works under jupyter, </span>
+<span class="c1"># replace this block with bash in terminal</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">os.path</span><span class="o">,</span> <span class="nn">shutil</span>
-<span class="n">target_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">),</span> <span class="s1">&#39;workshop/planets&#39;</span><span class="p">)</span>
+<span class="n">target_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">),</span> 
+    <span class="s1">&#39;workshop/planets&#39;</span>
+<span class="p">)</span>
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_folder</span><span class="p">):</span>
     <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">target_folder</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">target_folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -14716,7 +14721,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
@@ -14755,7 +14760,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git init
@@ -14794,7 +14799,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;Cold and dry, but everything is my favorite color&quot;</span> &gt; mars.txt
@@ -14810,7 +14815,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git status
@@ -14908,7 +14913,7 @@ nothing added to commit but untracked files present (use &#34;git add&#34; to tr
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ~/.ssh
@@ -14947,7 +14952,7 @@ nothing added to commit but untracked files present (use &#34;git add&#34; to tr
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>rm ~/.ssh/*
@@ -14963,7 +14968,7 @@ nothing added to commit but untracked files present (use &#34;git add&#34; to tr
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ssh-keygen -t ed25519 -C <span class="s2">&quot;zdshao.teach@gmail.com&quot;</span> -f ~/.ssh/id_ed25519 -N <span class="s2">&quot;&quot;</span>
@@ -14992,18 +14997,18 @@ nothing added to commit but untracked files present (use &#34;git add&#34; to tr
 Your identification has been saved in /Users/doris/.ssh/id_ed25519.
 Your public key has been saved in /Users/doris/.ssh/id_ed25519.pub.
 The key fingerprint is:
-SHA256:JejH2u7YqgBU3cQkIXvc1/5QU+bslX3NMZ/V5uKOsWQ zdshao.teach@gmail.com
+SHA256:wXbqnM2C4tAGMUfOdMMamvhi+sBdxon9kM9BgH0MQrk zdshao.teach@gmail.com
 The key&#39;s randomart image is:
 +--[ED25519 256]--+
-|   o.o*o       =o|
-|  . +.o+  .   =.%|
-| . . o...... o BB|
-|.   .. ..o. . + +|
-|.     . S  o . o |
-| .     +    E .  |
-|  .   . .  o *   |
-|   .   +    o .  |
-|    ..oo+        |
+|  .o*+=          |
+|   Booo=         |
+| .oo=o..+ .      |
+|. oE= +. +       |
+| ... O .S        |
+|o.ooo =+.+       |
+|+o..+ .+= o      |
+|.. + .   .       |
+| .. .            |
 +----[SHA256]-----+
 </pre>
 </div>
@@ -15018,7 +15023,7 @@ The key&#39;s randomart image is:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ~/.ssh/
@@ -15057,7 +15062,7 @@ The key&#39;s randomart image is:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat ~/.ssh/id_ed25519
@@ -15084,10 +15089,10 @@ The key&#39;s randomart image is:
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>-----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-QyNTUxOQAAACAuUvgC9fpU+1eATJnykNUR5+pLXuqu0KLjCFEbu9k2ewAAAKAcNB4GHDQe
-BgAAAAtzc2gtZWQyNTUxOQAAACAuUvgC9fpU+1eATJnykNUR5+pLXuqu0KLjCFEbu9k2ew
-AAAEAk3q6PmEBOMs0nz0h38Q3SjPFcY0fWDBo3MRZsxfNlmy5S+AL1+lT7V4BMmfKQ1RHn
-6kte6q7QouMIURu72TZ7AAAAFnpkc2hhby50ZWFjaEBnbWFpbC5jb20BAgMEBQYH
+QyNTUxOQAAACAP7x/RQuWWDo58q4UIyUkcvchmQNjz1D0tUHU3wXa0fQAAAKATd3UtE3d1
+LQAAAAtzc2gtZWQyNTUxOQAAACAP7x/RQuWWDo58q4UIyUkcvchmQNjz1D0tUHU3wXa0fQ
+AAAEBBhqMHE/oRHDCNMl+FDqy8BehcUNJAmGksmXozCOnXFw/vH9FC5ZYOjnyrhQjJSRy9
+yGZA2PPUPS1QdTfBdrR9AAAAFnpkc2hhby50ZWFjaEBnbWFpbC5jb20BAgMEBQYH
 -----END OPENSSH PRIVATE KEY-----
 </pre>
 </div>
@@ -15102,7 +15107,7 @@ AAAEAk3q6PmEBOMs0nz0h38Q3SjPFcY0fWDBo3MRZsxfNlmy5S+AL1+lT7V4BMmfKQ1RHn
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat ~/.ssh/id_ed25519.pub
@@ -15127,7 +15132,7 @@ AAAEAk3q6PmEBOMs0nz0h38Q3SjPFcY0fWDBo3MRZsxfNlmy5S+AL1+lT7V4BMmfKQ1RHn
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC5S+AL1+lT7V4BMmfKQ1RHn6kte6q7QouMIURu72TZ7 zdshao.teach@gmail.com
+<pre>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA/vH9FC5ZYOjnyrhQjJSRy9yGZA2PPUPS1QdTfBdrR9 zdshao.teach@gmail.com
 </pre>
 </div>
 </div>
@@ -15220,6 +15225,57 @@ AAAEAk3q6PmEBOMs0nz0h38Q3SjPFcY0fWDBo3MRZsxfNlmy5S+AL1+lT7V4BMmfKQ1RHn
 </div>
 </div>
 </div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ssh -T git@github.com -y
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Hi zdshaoteach! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="github/ssh-authen.png" alt=""></p>
+
+</div>
+</div>
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15236,7 +15292,7 @@ AAAEAk3q6PmEBOMs0nz0h38Q3SjPFcY0fWDBo3MRZsxfNlmy5S+AL1+lT7V4BMmfKQ1RHn
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git status
@@ -15283,7 +15339,7 @@ nothing added to commit but untracked files present (use &#34;git add&#34; to tr
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git config --global user.name <span class="s2">&quot;Zongru (Doris) Shao&quot;</span>
@@ -15338,7 +15394,7 @@ core.precomposeunicode=true
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git remote add origin https://github.com/zdshaoteach/test.git
@@ -15354,7 +15410,7 @@ core.precomposeunicode=true
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git config --list
@@ -15407,7 +15463,7 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git branch -M main
@@ -15423,7 +15479,7 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git push origin main
@@ -15463,7 +15519,7 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -a
@@ -15502,7 +15558,7 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git add mars.txt
@@ -15528,7 +15584,7 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[main (root-commit) b81c6df] first commit
+<pre>[main (root-commit) 1871851] first commit
  1 file changed, 1 insertion(+)
  create mode 100644 mars.txt
 </pre>
@@ -15544,7 +15600,7 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git push origin main
