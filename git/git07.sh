@@ -1,13 +1,10 @@
 #!/bin/sh
-cd ~
-mkdir workshop
-cd workshop
-mkdir planets
-cd planets
-git init
-echo "Cold and dry, but everything is my favorite color" > mars.txt
-git status
-rm ~/.ssh/*
 ssh-keygen -t ed25519 -C "zdshao.teach@gmail.com"
+# add ssh-key to github account
+ssh -T git@github.com
+git remote add origin <git url>
 git checkout -b main
-git status
+git push origin main
+git pull origin main
+git log --oneline
+git log --oneline --graph

@@ -1,11 +1,4 @@
 #!/bin/sh
-#cd ~
-#mkdir workshop
-#cd workshop
-#mkdir planets
-#cd planets
-git init
-ls
-ls -a
-git checkout -b main
-git status
+# resolve conflicted edits on Github
+git push origin main
+git pull origin main
