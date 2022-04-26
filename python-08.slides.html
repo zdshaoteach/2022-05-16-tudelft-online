@@ -15111,7 +15111,8 @@ div.jp-OutputPrompt {
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">20</span><span class="p">]</span> <span class="o">==</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> \
+        <span class="ow">and</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">20</span><span class="p">]</span> <span class="o">==</span> <span class="mi">20</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Suspicious looking maxima!&#39;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Minima add up to zero!&#39;</span><span class="p">)</span>
@@ -15329,10 +15330,10 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[ 7.99392631 12.06487567  8.57878764  2.5005247   6.34889227  4.03034687
- -8.40643045  2.61891598] 4.466229872987309
-[13.52769644 17.5986458  14.11255776  8.03429483 11.88266239  9.564117
- -2.87266033  8.1526861 ] 10.0
+<pre>[ 7.37197482  4.53046699  1.65815119  8.34885875  9.88557394 -0.19459353
+  2.1489854   1.51151754] 4.407616888715739
+[12.96435794 10.12285011  7.25053431 13.94124186 15.47795705  5.39778958
+  7.74136851  7.10390065] 10.0
 </pre>
 </div>
 </div>
@@ -15887,14 +15888,14 @@ a: 1 b: 2 c: 77
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_a_list</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="n">print_a_list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">print_a_list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
@@ -15919,12 +15920,12 @@ a: 1 b: 2 c: 77
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>----------------------------------------------------------------------------------------------------
+<pre>--------------------------------------------------
 1
 2
 3
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
 1
 2
 3
@@ -15932,7 +15933,7 @@ a: 1 b: 2 c: 77
 5
 6
 7
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------
 </pre>
 </div>
 </div>
@@ -15946,14 +15947,14 @@ a: 1 b: 2 c: 77
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_a_list</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="n">print_a_list</span><span class="p">(</span><span class="n">this</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">that</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">print_a_list</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -15978,15 +15979,15 @@ a: 1 b: 2 c: 77
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>----------------------------------------------------------------------------------------------------
+<pre>--------------------------------------------------
 this 1
 that 2
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
 x 1
 y 2
 z 3
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------
 </pre>
 </div>
 </div>
@@ -16016,7 +16017,7 @@ z 3
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
@@ -16072,17 +16073,20 @@ z 3
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="n">input_array</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Takes an array as input, and returns a corresponding array scaled so</span>
-<span class="sd">    that 0 corresponds to the minimum and 1 to the maximum value of the input array.</span>
+    <span class="sd">&quot;&quot;&quot;Takes an array as input, and returns a corresponding array </span>
+<span class="sd">    scaled so that 0 corresponds to the minimum and 1 to </span>
+<span class="sd">    the maximum value of the input array.</span>
 
 <span class="sd">    Examples:</span>
 <span class="sd">    &gt;&gt;&gt; rescale(numpy.arange(10.0))</span>
-<span class="sd">    array([ 0.        ,  0.11111111,  0.22222222,  0.33333333,  0.44444444,</span>
-<span class="sd">           0.55555556,  0.66666667,  0.77777778,  0.88888889,  1.        ])</span>
+<span class="sd">    array([ 0.        ,  0.11111111,  0.22222222,  0.33333333,  </span>
+<span class="sd">            0.44444444,</span>
+<span class="sd">           0.55555556,  0.66666667,  0.77777778,  0.88888889,  </span>
+<span class="sd">           1.        ])</span>
 <span class="sd">    &gt;&gt;&gt; rescale(numpy.linspace(0, 100, 5))</span>
 <span class="sd">    array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ])</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -16102,7 +16106,7 @@ z 3
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">rescale</span><span class="p">)</span>
@@ -16130,13 +16134,16 @@ z 3
 <pre>Help on function rescale in module __main__:
 
 rescale(input_array)
-    Takes an array as input, and returns a corresponding array scaled so
-    that 0 corresponds to the minimum and 1 to the maximum value of the input array.
+    Takes an array as input, and returns a corresponding array 
+    scaled so that 0 corresponds to the minimum and 1 to 
+    the maximum value of the input array.
     
     Examples:
     &gt;&gt;&gt; rescale(numpy.arange(10.0))
-    array([ 0.        ,  0.11111111,  0.22222222,  0.33333333,  0.44444444,
-           0.55555556,  0.66666667,  0.77777778,  0.88888889,  1.        ])
+    array([ 0.        ,  0.11111111,  0.22222222,  0.33333333,  
+            0.44444444,
+           0.55555556,  0.66666667,  0.77777778,  0.88888889,  
+           1.        ])
     &gt;&gt;&gt; rescale(numpy.linspace(0, 100, 5))
     array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ])
 
@@ -16165,7 +16172,7 @@ rescale(input_array)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="mi">0</span>
@@ -16229,7 +16236,7 @@ rescale(input_array)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three</span><span class="p">,</span> <span class="n">four</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
@@ -16259,7 +16266,7 @@ rescale(input_array)
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
-<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [25]</span>
+<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [24]</span>
 <span class="ansi-red-fg">    def numbers(one, two=2, three, four=4):</span>
                                    ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> non-default argument follows default argument
@@ -16269,22 +16276,6 @@ rescale(input_array)
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div></section></section>
