@@ -14694,7 +14694,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat git/git05.sh
@@ -14720,26 +14720,15 @@ div.jp-OutputPrompt {
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>#!/bin/sh
-# continue from git-04
-echo &#34;An ill-considered change&#34; &gt;&gt; mars.txt
-cat mars.txt
 git diff HEAD mars.txt
 git diff HEAD~1 mars.txt
 git diff HEAD~2 mars.txt
 git diff HEAD~3 mars.txt
-git log
 git diff &lt;commit label&gt; mars.txt
-git status
 git checkout HEAD mars.txt # roll back
-cat mars.txt
-git status
-git checkout f22b25e mars.txt # roll back
-cat mars.txt
-git status
-git checkout f22b25e # gives error
-git checkout main # reattach
-!cat mars.txt
-!git log</pre>
+git checkout &lt;commit label&gt; mars.txt # roll back
+git checkout &lt;commit label&gt; # roll back
+git checkout main # reattach</pre>
 </div>
 </div>
 
@@ -14763,12 +14752,17 @@ git checkout main # reattach
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create directory (works under jupyter, replace this block with bash in terminal)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># relocate working directory </span>
+<span class="c1"># works under jupyter, </span>
+<span class="c1"># replace this block with bash in terminal</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">os.path</span><span class="o">,</span> <span class="nn">shutil</span>
-<span class="n">target_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">),</span> <span class="s1">&#39;workshop/planets&#39;</span><span class="p">)</span>
+<span class="n">target_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">),</span> 
+    <span class="s1">&#39;workshop/planets&#39;</span>
+<span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_folder</span><span class="p">)</span>
 </pre></div>
 
@@ -14782,7 +14776,7 @@ git checkout main # reattach
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
@@ -14821,7 +14815,7 @@ git checkout main # reattach
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;An ill-considered change&quot;</span> &gt;&gt; mars.txt
@@ -14837,7 +14831,7 @@ git checkout main # reattach
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
@@ -14879,7 +14873,7 @@ An ill-considered change
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git status
@@ -14919,6 +14913,143 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 
 </div>
 
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre><span class="ansi-yellow-fg">commit 94e0979f3d9611764ef59ea3c5fad47361510a40</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:19 2022 +0200
+
+    Discuss concerns about Mars&#39; climate for Mummy
+
+<span class="ansi-yellow-fg">commit 652b37c2fa168398b5f43ff12b4863db81110d5d</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:14 2022 +0200
+
+    Add concerns about effects of Mars&#39; moons on Wolfman
+
+<span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
+
+    Start notes on Mars as a base
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log --oneline
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre><span class="ansi-yellow-fg">94e0979</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span> Discuss concerns about Mars&#39; climate for Mummy
+<span class="ansi-yellow-fg">652b37c</span> Add concerns about effects of Mars&#39; moons on Wolfman
+<span class="ansi-yellow-fg">9a5b746</span> Start notes on Mars as a base
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log --oneline --graph
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>* <span class="ansi-yellow-fg">94e0979</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span> Discuss concerns about Mars&#39; climate for Mummy
+* <span class="ansi-yellow-fg">652b37c</span> Add concerns about effects of Mars&#39; moons on Wolfman
+* <span class="ansi-yellow-fg">9a5b746</span> Start notes on Mars as a base
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -14935,7 +15066,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff HEAD mars.txt
@@ -14982,7 +15113,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff HEAD~1 mars.txt
@@ -15029,7 +15160,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff HEAD~2 mars.txt
@@ -15076,7 +15207,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff HEAD~3 mars.txt
@@ -15117,7 +15248,7 @@ Use &#39;--&#39; to separate paths from revisions, like this:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git show HEAD~2 mars.txt
@@ -15142,9 +15273,9 @@ Use &#39;--&#39; to separate paths from revisions, like this:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit 24730247f71eaa709bef48585b8c5bc1a8873339</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:39:34 2022 +0200
+<pre><span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
 
     Start notes on Mars as a base
 
@@ -15194,7 +15325,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log
@@ -15219,21 +15350,21 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit efba9783de5522bd295808662190805826f0a110</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:41:02 2022 +0200
+<pre><span class="ansi-yellow-fg">commit 94e0979f3d9611764ef59ea3c5fad47361510a40</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:19 2022 +0200
 
     Discuss concerns about Mars&#39; climate for Mummy
 
-<span class="ansi-yellow-fg">commit 2cecef9cd8485f21122605dafed3b773540686f6</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:40:11 2022 +0200
+<span class="ansi-yellow-fg">commit 652b37c2fa168398b5f43ff12b4863db81110d5d</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:14 2022 +0200
 
     Add concerns about effects of Mars&#39; moons on Wolfman
 
-<span class="ansi-yellow-fg">commit 24730247f71eaa709bef48585b8c5bc1a8873339</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:39:34 2022 +0200
+<span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
 
     Start notes on Mars as a base
 </pre>
@@ -15249,7 +15380,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff efba9783de5522bd295808662190805826f0a110 mars.txt
@@ -15274,15 +15405,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-bold">diff --git a/mars.txt b/mars.txt</span>
-<span class="ansi-bold">index b36abfd..93a3e13 100644</span>
-<span class="ansi-bold">--- a/mars.txt</span>
-<span class="ansi-bold">+++ b/mars.txt</span>
-<span class="ansi-cyan-fg">@@ -1,3 +1,4 @@</span>
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
- But the Mummy will appreciate the lack of humidity
-<span class="ansi-green-fg">+</span><span class="ansi-green-fg">An ill-considered change</span>
+<pre>fatal: bad object efba9783de5522bd295808662190805826f0a110
 </pre>
 </div>
 </div>
@@ -15296,7 +15419,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff efba978 mars.txt
@@ -15321,15 +15444,9 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-bold">diff --git a/mars.txt b/mars.txt</span>
-<span class="ansi-bold">index b36abfd..93a3e13 100644</span>
-<span class="ansi-bold">--- a/mars.txt</span>
-<span class="ansi-bold">+++ b/mars.txt</span>
-<span class="ansi-cyan-fg">@@ -1,3 +1,4 @@</span>
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
- But the Mummy will appreciate the lack of humidity
-<span class="ansi-green-fg">+</span><span class="ansi-green-fg">An ill-considered change</span>
+<pre>fatal: ambiguous argument &#39;efba978&#39;: unknown revision or path not in the working tree.
+Use &#39;--&#39; to separate paths from revisions, like this:
+&#39;git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]&#39;
 </pre>
 </div>
 </div>
@@ -15343,7 +15460,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff <span class="m">2473024</span> mars.txt
@@ -15368,15 +15485,9 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-bold">diff --git a/mars.txt b/mars.txt</span>
-<span class="ansi-bold">index df0654a..93a3e13 100644</span>
-<span class="ansi-bold">--- a/mars.txt</span>
-<span class="ansi-bold">+++ b/mars.txt</span>
-<span class="ansi-cyan-fg">@@ -1 +1,4 @@</span>
- Cold and dry, but everything is my favorite color
-<span class="ansi-green-fg">+</span><span class="ansi-green-fg">The two moons may be a problem for Wolfman</span>
-<span class="ansi-green-fg">+</span><span class="ansi-green-fg">But the Mummy will appreciate the lack of humidity</span>
-<span class="ansi-green-fg">+</span><span class="ansi-green-fg">An ill-considered change</span>
+<pre>fatal: ambiguous argument &#39;2473024&#39;: unknown revision or path not in the working tree.
+Use &#39;--&#39; to separate paths from revisions, like this:
+&#39;git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]&#39;
 </pre>
 </div>
 </div>
@@ -15401,7 +15512,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git status
@@ -15446,7 +15557,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log
@@ -15471,21 +15582,21 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit efba9783de5522bd295808662190805826f0a110</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:41:02 2022 +0200
+<pre><span class="ansi-yellow-fg">commit 94e0979f3d9611764ef59ea3c5fad47361510a40</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:19 2022 +0200
 
     Discuss concerns about Mars&#39; climate for Mummy
 
-<span class="ansi-yellow-fg">commit 2cecef9cd8485f21122605dafed3b773540686f6</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:40:11 2022 +0200
+<span class="ansi-yellow-fg">commit 652b37c2fa168398b5f43ff12b4863db81110d5d</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:14 2022 +0200
 
     Add concerns about effects of Mars&#39; moons on Wolfman
 
-<span class="ansi-yellow-fg">commit 24730247f71eaa709bef48585b8c5bc1a8873339</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:39:34 2022 +0200
+<span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
 
     Start notes on Mars as a base
 </pre>
@@ -15501,7 +15612,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout efba978 mars.txt
@@ -15526,87 +15637,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Updated 1 path from 6573bcb
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD mars.txt
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Updated 0 paths from 6573bcb
+<pre>error: pathspec &#39;efba978&#39; did not match any file(s) known to git
 </pre>
 </div>
 </div>
@@ -15648,6 +15679,7 @@ But the Mummy will appreciate the lack of humidity
 <pre>Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
+An ill-considered change
 </pre>
 </div>
 </div>
@@ -15664,7 +15696,7 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD~1 mars.txt
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD mars.txt
 </pre></div>
 
      </div>
@@ -15686,7 +15718,7 @@ But the Mummy will appreciate the lack of humidity
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Updated 1 path from 5ed8d08
+<pre>Updated 1 path from 6573bcb
 </pre>
 </div>
 </div>
@@ -15727,6 +15759,7 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
 </pre>
 </div>
 </div>
@@ -15743,7 +15776,7 @@ The two moons may be a problem for Wolfman
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD mars.txt
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD~1 mars.txt
 </pre></div>
 
      </div>
@@ -15765,7 +15798,7 @@ The two moons may be a problem for Wolfman
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Updated 1 path from 6573bcb
+<pre>Updated 1 path from 5ed8d08
 </pre>
 </div>
 </div>
@@ -15806,6 +15839,85 @@ The two moons may be a problem for Wolfman
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD mars.txt
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Updated 1 path from 6573bcb
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 </pre>
 </div>
@@ -15820,7 +15932,7 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD
@@ -15836,7 +15948,7 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD~1
@@ -15878,78 +15990,13 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-HEAD is now at 2cecef9 Add concerns about effects of Mars&#39; moons on Wolfman
+HEAD is now at 652b37c Add concerns about effects of Mars&#39; moons on Wolfman
 </pre>
 </div>
 </div>
 
 </div>
 
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit 2cecef9cd8485f21122605dafed3b773540686f6</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD</span><span class="ansi-yellow-fg">)</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:40:11 2022 +0200
-
-    Add concerns about effects of Mars&#39; moons on Wolfman
-
-<span class="ansi-yellow-fg">commit 24730247f71eaa709bef48585b8c5bc1a8873339</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:39:34 2022 +0200
-
-    Start notes on Mars as a base
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15982,15 +16029,15 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit 2cecef9cd8485f21122605dafed3b773540686f6</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD</span><span class="ansi-yellow-fg">)</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:40:11 2022 +0200
+<pre><span class="ansi-yellow-fg">commit 652b37c2fa168398b5f43ff12b4863db81110d5d</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD</span><span class="ansi-yellow-fg">)</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:14 2022 +0200
 
     Add concerns about effects of Mars&#39; moons on Wolfman
 
-<span class="ansi-yellow-fg">commit 24730247f71eaa709bef48585b8c5bc1a8873339</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:39:34 2022 +0200
+<span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
 
     Start notes on Mars as a base
 </pre>
@@ -16001,7 +16048,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16009,36 +16056,12 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD~1
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Previous HEAD position was 2cecef9 Add concerns about effects of Mars&#39; moons on Wolfman
-HEAD is now at 2473024 Start notes on Mars as a base
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16071,9 +16094,15 @@ HEAD is now at 2473024 Start notes on Mars as a base
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit 24730247f71eaa709bef48585b8c5bc1a8873339</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD</span><span class="ansi-yellow-fg">)</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:39:34 2022 +0200
+<pre><span class="ansi-yellow-fg">commit 652b37c2fa168398b5f43ff12b4863db81110d5d</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD</span><span class="ansi-yellow-fg">)</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:14 2022 +0200
+
+    Add concerns about effects of Mars&#39; moons on Wolfman
+
+<span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
 
     Start notes on Mars as a base
 </pre>
@@ -16090,6 +16119,89 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout HEAD~1
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Previous HEAD position was 652b37c Add concerns about effects of Mars&#39; moons on Wolfman
+HEAD is now at 9a5b746 Start notes on Mars as a base
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre><span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD</span><span class="ansi-yellow-fg">)</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
+
+    Start notes on Mars as a base
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
@@ -16123,7 +16235,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 </div>
 
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16141,7 +16253,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git checkout main
@@ -16166,7 +16278,7 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Previous HEAD position was 2473024 Start notes on Mars as a base
+<pre>Previous HEAD position was 9a5b746 Start notes on Mars as a base
 Switched to branch &#39;main&#39;
 </pre>
 </div>
@@ -16181,7 +16293,7 @@ Switched to branch &#39;main&#39;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
@@ -16222,7 +16334,7 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log
@@ -16247,21 +16359,21 @@ But the Mummy will appreciate the lack of humidity
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit efba9783de5522bd295808662190805826f0a110</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:41:02 2022 +0200
+<pre><span class="ansi-yellow-fg">commit 94e0979f3d9611764ef59ea3c5fad47361510a40</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:19 2022 +0200
 
     Discuss concerns about Mars&#39; climate for Mummy
 
-<span class="ansi-yellow-fg">commit 2cecef9cd8485f21122605dafed3b773540686f6</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:40:11 2022 +0200
+<span class="ansi-yellow-fg">commit 652b37c2fa168398b5f43ff12b4863db81110d5d</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:14 2022 +0200
 
     Add concerns about effects of Mars&#39; moons on Wolfman
 
-<span class="ansi-yellow-fg">commit 24730247f71eaa709bef48585b8c5bc1a8873339</span>
-Author: Zongru (Doris) Shao &lt;drssth@gmail.com&gt;
-Date:   Mon Apr 25 21:39:34 2022 +0200
+<span class="ansi-yellow-fg">commit 9a5b746996685924a4e1d67f66f59748cf34e72e</span>
+Author: Zongru (Doris) Shao &lt;zdshao.teach@gmail.com&gt;
+Date:   Tue Apr 26 10:32:11 2022 +0200
 
     Start notes on Mars as a base
 </pre>
@@ -16270,54 +16382,6 @@ Date:   Mon Apr 25 21:39:34 2022 +0200
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div></section></section>
