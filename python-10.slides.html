@@ -14697,12 +14697,12 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_plenum">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs   celltag_plenum">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_length</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
@@ -14712,33 +14712,6 @@ div.jp-OutputPrompt {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [1]</span>
-<span class="ansi-red-fg">    print(len(input_list)</span>
-                         ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> unexpected EOF while parsing
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -14769,7 +14742,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_ice_cream</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
@@ -14780,8 +14753,11 @@ div.jp-OutputPrompt {
         <span class="s1">&#39;choclate&#39;</span><span class="p">,</span>
         <span class="s1">&#39;strawberry&#39;</span>
     <span class="p">]</span>
-    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s1">&#39;index should be an integer&#39;</span>
-    <span class="k">assert</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">menu</span><span class="p">),</span> <span class="s1">&#39;index exceeds the length of menu, which is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">menu</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> \
+        <span class="s1">&#39;index should be an integer&#39;</span>
+    <span class="k">assert</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">menu</span><span class="p">),</span> \
+        <span class="s1">&#39;index exceeds the length of menu, which is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">menu</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">menu</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
 </pre></div>
 
@@ -14790,12 +14766,12 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_ice_cream</span><span class="p">(</span><span class="s1">&#39;coffe&#39;</span><span class="p">)</span>
@@ -14806,52 +14782,12 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [3]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">get_ice_cream</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">coffe</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">)</span>
-
-Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">get_ice_cream</span><span class="ansi-blue-fg">(index)</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">get_ice_cream</span>(index):
-<span class="ansi-green-intense-fg ansi-bold">      2</span>     menu <span style="color: rgb(98,98,98)">=</span> [
-<span class="ansi-green-intense-fg ansi-bold">      3</span>         <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">vanilla</span><span style="color: rgb(175,0,0)">&#39;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      4</span>         <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">cherry</span><span style="color: rgb(175,0,0)">&#39;</span>,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span>         <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">strawberry</span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span>     ]
-<span class="ansi-green-fg">----&gt; 9</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> <span style="color: rgb(0,135,0)">isinstance</span>(index, <span style="color: rgb(0,135,0)">int</span>), <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">index should be an integer</span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> index <span style="color: rgb(98,98,98)">&gt;</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">0</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> index <span style="color: rgb(98,98,98)">&lt;</span> <span style="color: rgb(0,135,0)">len</span>(menu), <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">index exceeds the length of menu, which is </span><span class="ansi-bold" style="color: rgb(175,95,135)">{}</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">.</span>format(<span style="color: rgb(0,135,0)">len</span>(menu))
-<span class="ansi-green-intense-fg ansi-bold">     11</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> menu[index]
-
-<span class="ansi-red-fg">AssertionError</span>: index should be an integer</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_ice_cream</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
@@ -14860,45 +14796,6 @@ Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">g
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">get_ice_cream</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">7</span><span class="ansi-yellow-bg">)</span>
-
-Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">get_ice_cream</span><span class="ansi-blue-fg">(index)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> menu <span style="color: rgb(98,98,98)">=</span> [
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">vanilla</span><span style="color: rgb(175,0,0)">&#39;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      4</span>     <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">cherry</span><span style="color: rgb(175,0,0)">&#39;</span>,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">strawberry</span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> ]
-<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> <span style="color: rgb(0,135,0)">isinstance</span>(index, <span style="color: rgb(0,135,0)">int</span>), <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">index should be an integer</span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-fg">---&gt; 10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> index <span style="color: rgb(98,98,98)">&gt;</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">0</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> index <span style="color: rgb(98,98,98)">&lt;</span> <span style="color: rgb(0,135,0)">len</span>(menu), <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">index exceeds the length of menu, which is </span><span class="ansi-bold" style="color: rgb(175,95,135)">{}</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">.</span>format(<span style="color: rgb(0,135,0)">len</span>(menu))
-<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> menu[index]
-
-<span class="ansi-red-fg">AssertionError</span>: index exceeds the length of menu, which is 5</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -14940,7 +14837,7 @@ Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">g
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">shopping</span><span class="p">(</span><span class="n">wallet</span><span class="p">,</span> <span class="n">shopping_list</span><span class="p">,</span> <span class="n">too_expensive</span><span class="p">):</span>
@@ -14973,12 +14870,12 @@ Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">g
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_shopping</span><span class="p">():</span>
@@ -15001,45 +14898,12 @@ Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">g
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The #0 item I want to buy is rice, 
-                 and it costs 2.0 dollars.
-The #1 item I want to buy is olive oil, 
-                 and it costs 5.5 dollars.
-The #2 item I want to buy is salt, 
-                 and it costs 0.9 dollars.
-The #3 item I want to buy is sugar, 
-                 and it costs 1.5 dollars.
-The #4 item I want to buy is apple, 
-                 and it costs 2.9 dollars.
-total amount of the bill is 12.8 dollars.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_shopping</span><span class="p">():</span>
@@ -15062,44 +14926,12 @@ total amount of the bill is 12.8 dollars.
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The #0 item I want to buy is rice, 
-                 and it costs 2.0 dollars.
-The #1 item I want to buy is olive oil, 
-                 and it costs 5.5 dollars.
-The #2 item I want to buy is salt, 
-                 and it costs 0.9 dollars.
-The #3 item I want to buy is sugar, 
-                 and it costs 1.5 dollars.
-I do not have enough money for (&#39;apple&#39;, 2.9)
-total amount of the bill is 9.9 dollars.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_shopping</span><span class="p">():</span>
@@ -15120,38 +14952,6 @@ total amount of the bill is 9.9 dollars.
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The #0 item I want to buy is rice, 
-                 and it costs 2.0 dollars.
-I do not want to buy the #1 item olive oil 
-                 because it is too expensive
-The #2 item I want to buy is salt, 
-                 and it costs 0.9 dollars.
-The #3 item I want to buy is sugar, 
-                 and it costs 1.5 dollars.
-I do not have enough money for (&#39;apple&#39;, 2.9)
-total amount of the bill is 4.4 dollars.
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="fragment">
@@ -15201,7 +15001,7 @@ total amount of the bill is 4.4 dollars.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">find_prime</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
@@ -15239,7 +15039,7 @@ total amount of the bill is 4.4 dollars.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_find_prime</span><span class="p">():</span>
@@ -15292,12 +15092,14 @@ total amount of the bill is 4.4 dollars.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">range_overlap</span><span class="p">(</span><span class="n">list_of_ranges</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">list_of_ranges</span><span class="p">):</span> 
-        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">float</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">float</span><span class="p">),</span> \
+        <span class="k">assert</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> \
+            <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">float</span><span class="p">)</span> \
+            <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">float</span><span class="p">),</span> \
         <span class="s1">&#39;#</span><span class="si">{}</span><span class="s1"> item should be a pair of float values&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
         
     <span class="n">first_elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">list_of_ranges</span><span class="p">]</span>
@@ -15320,7 +15122,7 @@ total amount of the bill is 4.4 dollars.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_range_overlap</span><span class="p">():</span>
@@ -15330,70 +15132,6 @@ total amount of the bill is 4.4 dollars.
     <span class="k">assert</span> <span class="n">range_overlap</span><span class="p">([</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span> <span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">range_overlap</span><span class="p">([</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">range_overlap</span><span class="p">([])</span> <span class="o">==</span> <span class="kc">None</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
