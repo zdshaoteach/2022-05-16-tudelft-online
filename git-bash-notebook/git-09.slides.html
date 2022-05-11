@@ -14698,7 +14698,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat git/git09.sh
+<div class=" highlight hl-bash"><pre><span></span>cat git/git09.sh
 </pre></div>
 
      </div>
@@ -14758,7 +14758,7 @@ git pull origin main</pre>
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14766,22 +14766,42 @@ git pull origin main</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># relocate directory </span>
-<span class="c1"># works under jupyter, </span>
-<span class="c1"># replace this block with bash in terminal</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">os.path</span><span class="o">,</span> <span class="nn">shutil</span>
-<span class="n">target_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">),</span> 
-    <span class="s1">&#39;workshop/planets&#39;</span>
-<span class="p">)</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_folder</span><span class="p">):</span>
-    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">target_folder</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">target_folder</span><span class="p">))</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="k">if</span> <span class="o">[</span> -d ~/workshop <span class="o">]</span> 
+<span class="k">then</span>
+    <span class="nb">echo</span> <span class="s1">&#39;folder exists, remove folder&#39;</span>
+    rm -rf ~/workshop
+<span class="k">fi</span>
+
+mkdir ~/workshop
+<span class="nb">cd</span> ~/workshop
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>folder exists, remove folder
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14792,7 +14812,7 @@ git pull origin main</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 
      </div>
@@ -14831,7 +14851,7 @@ git pull origin main</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git clone git@github.com:zdshaoteach/test.git planets
+<div class=" highlight hl-bash"><pre><span></span>git clone git@github.com:zdshaoteach/test.git planets
 </pre></div>
 
      </div>
@@ -14854,11 +14874,12 @@ git pull origin main</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Cloning into &#39;planets&#39;...
-remote: Enumerating objects: 6, done.
-remote: Counting objects: 100% (6/6), done.
-remote: Compressing objects: 100% (4/4), done.
-remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
-Receiving objects: 100% (6/6), done.
+remote: Enumerating objects: 18, done.        
+remote: Counting objects: 100% (18/18), done.        
+remote: Compressing objects: 100% (15/15), done.        
+remote: Total 18 (delta 4), reused 15 (delta 1), pack-reused 0        
+Receiving objects: 100% (18/18), done.
+Resolving deltas: 100% (4/4), done.
 </pre>
 </div>
 </div>
@@ -14875,7 +14896,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_folder</span><span class="p">)</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/workshop/planets
 </pre></div>
 
      </div>
@@ -14891,7 +14912,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 
      </div>
@@ -14930,7 +14951,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -a
+<div class=" highlight hl-bash"><pre><span></span>ls -a
 </pre></div>
 
      </div>
@@ -14969,7 +14990,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git status
+<div class=" highlight hl-bash"><pre><span></span>git status
 </pre></div>
 
      </div>
@@ -15022,17 +15043,7 @@ nothing to commit, working tree clean
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># relocate directory </span>
-<span class="c1"># works under jupyter, </span>
-<span class="c1"># replace this block with bash in terminal</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">os.path</span><span class="o">,</span> <span class="nn">shutil</span>
-<span class="n">own_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">),</span> 
-    <span class="s1">&#39;workshop/test&#39;</span>
-<span class="p">)</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">own_folder</span><span class="p">):</span>
-    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">own_folder</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">own_folder</span><span class="p">))</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/workshop
 </pre></div>
 
      </div>
@@ -15048,7 +15059,7 @@ nothing to commit, working tree clean
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git clone git@github.com:zdshaoteach/test.git test
+<div class=" highlight hl-bash"><pre><span></span>git clone git@github.com:zdshaoteach/test.git <span class="nb">test</span>
 </pre></div>
 
      </div>
@@ -15071,11 +15082,12 @@ nothing to commit, working tree clean
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Cloning into &#39;test&#39;...
-remote: Enumerating objects: 6, done.
-remote: Counting objects: 100% (6/6), done.
-remote: Compressing objects: 100% (4/4), done.
-remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
-Receiving objects: 100% (6/6), done.
+remote: Enumerating objects: 18, done.        
+remote: Counting objects: 100% (18/18), done.        
+remote: Compressing objects: 100% (15/15), done.        
+remote: Total 18 (delta 4), reused 15 (delta 1), pack-reused 0        
+Receiving objects: 100% (18/18), done.
+Resolving deltas: 100% (4/4), done.
 </pre>
 </div>
 </div>
@@ -15092,7 +15104,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">own_folder</span><span class="p">)</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/workshop/test
 </pre></div>
 
      </div>
@@ -15108,7 +15120,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -15130,7 +15142,9 @@ Receiving objects: 100% (6/6), done.
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color
+<pre>Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
 </pre>
 </div>
 </div>
@@ -15158,7 +15172,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_folder</span><span class="p">)</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/workshop/planets
 </pre></div>
 
      </div>
@@ -15174,7 +15188,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 
      </div>
@@ -15213,7 +15227,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -15235,7 +15249,9 @@ Receiving objects: 100% (6/6), done.
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color
+<pre>Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
 </pre>
 </div>
 </div>
@@ -15252,8 +15268,8 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;The two moons may be a problem for Wolfman&quot;</span> &gt;&gt; mars.txt
-<span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;But the Mummy will appreciate the lack of humidity&quot;</span> &gt;&gt; mars.txt
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;The two moons may be a problem for Wolfman&quot;</span> &gt;&gt; mars.txt
+<span class="nb">echo</span> <span class="s2">&quot;But the Mummy will appreciate the lack of humidity&quot;</span> &gt;&gt; mars.txt
 </pre></div>
 
      </div>
@@ -15269,7 +15285,7 @@ Receiving objects: 100% (6/6), done.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -15291,7 +15307,9 @@ Receiving objects: 100% (6/6), done.
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color
+<pre>Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
 The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 </pre>
@@ -15310,8 +15328,8 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git add mars.txt
-<span class="o">!</span>git commit -m <span class="s2">&quot;Add a line in our home copy&quot;</span>
+<div class=" highlight hl-bash"><pre><span></span>git add mars.txt
+git commit -m <span class="s2">&quot;Add a line in our home copy&quot;</span>
 </pre></div>
 
      </div>
@@ -15333,7 +15351,7 @@ But the Mummy will appreciate the lack of humidity
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[main 64513cc] Add a line in our home copy
+<pre>[main 457975f] Add a line in our home copy
  1 file changed, 2 insertions(+)
 </pre>
 </div>
@@ -15351,7 +15369,7 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git push origin main
+<div class=" highlight hl-bash"><pre><span></span>git push origin main
 </pre></div>
 
      </div>
@@ -15377,10 +15395,11 @@ But the Mummy will appreciate the lack of humidity
 Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 395 bytes | 395.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Writing objects: 100% (3/3), 314 bytes | 157.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.        
 To github.com:zdshaoteach/test.git
-   11fc4fa..64513cc  main -&gt; main
+   72eb8f9..457975f  main -&gt; main
 </pre>
 </div>
 </div>
@@ -15389,59 +15408,20 @@ To github.com:zdshaoteach/test.git
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log 
+<div class=" highlight hl-bash"><pre><span></span>git log
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit 64513cc99fa6407577cd169f0aa777ec9ccfe248</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">, </span><span class="ansi-red-intense-fg ansi-bold">origin/main</span><span class="ansi-yellow-fg">, </span><span class="ansi-red-intense-fg ansi-bold">origin/HEAD</span><span class="ansi-yellow-fg">)</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 18:50:17 2022 +0200
-
-    Add a line in our home copy
-
-<span class="ansi-yellow-fg">commit 11fc4facdead9cca65884bad058e2f24260426bd</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 18:41:38 2022 +0200
-
-    Add notes about Pluto
-
-<span class="ansi-yellow-fg">commit fcce3db60590ff4e0cf9e8a15c66c2575d8605d3</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 17:59:31 2022 +0200
-
-    first commit
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -15463,7 +15443,7 @@ Date:   Wed May 11 17:59:31 2022 +0200
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">own_folder</span><span class="p">)</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/workshop/test
 </pre></div>
 
      </div>
@@ -15479,7 +15459,7 @@ Date:   Wed May 11 17:59:31 2022 +0200
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -15501,7 +15481,9 @@ Date:   Wed May 11 17:59:31 2022 +0200
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color
+<pre>Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
 </pre>
 </div>
 </div>
@@ -15518,7 +15500,7 @@ Date:   Wed May 11 17:59:31 2022 +0200
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 
      </div>
@@ -15557,7 +15539,7 @@ Date:   Wed May 11 17:59:31 2022 +0200
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;We added a different line in the other copy&quot;</span> &gt;&gt; mars.txt
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;We added a different line in the other copy&quot;</span> &gt;&gt; mars.txt
 </pre></div>
 
      </div>
@@ -15573,7 +15555,7 @@ Date:   Wed May 11 17:59:31 2022 +0200
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git status
+<div class=" highlight hl-bash"><pre><span></span>git status
 </pre></div>
 
      </div>
@@ -15601,7 +15583,7 @@ Your branch is up to date with &#39;origin/main&#39;.
 Changes not staged for commit:
   (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
   (use &#34;git restore &lt;file&gt;...&#34; to discard changes in working directory)
-	<span class="ansi-red-fg">modified:   mars.txt</span>
+	modified:   mars.txt
 
 no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
 </pre>
@@ -15620,7 +15602,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git diff
+<div class=" highlight hl-bash"><pre><span></span>git diff
 </pre></div>
 
      </div>
@@ -15642,62 +15624,15 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-bold">diff --git a/mars.txt b/mars.txt</span>
-<span class="ansi-bold">index df0654a..1e790a3 100644</span>
-<span class="ansi-bold">--- a/mars.txt</span>
-<span class="ansi-bold">+++ b/mars.txt</span>
-<span class="ansi-cyan-fg">@@ -1 +1,2 @@</span>
- Cold and dry, but everything is my favorite color
-<span class="ansi-green-fg">+</span><span class="ansi-green-fg">We added a different line in the other copy</span>
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit 11fc4facdead9cca65884bad058e2f24260426bd</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">, </span><span class="ansi-red-intense-fg ansi-bold">origin/main</span><span class="ansi-yellow-fg">, </span><span class="ansi-red-intense-fg ansi-bold">origin/HEAD</span><span class="ansi-yellow-fg">)</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 18:41:38 2022 +0200
-
-    Add notes about Pluto
-
-<span class="ansi-yellow-fg">commit fcce3db60590ff4e0cf9e8a15c66c2575d8605d3</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 17:59:31 2022 +0200
-
-    first commit
+<pre>diff --git a/mars.txt b/mars.txt
+index 686a2af..98a9d53 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,4 @@
+ Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+ The two moons may be a problem for Wolfman
+ But the Mummy will appreciate the lack of humidity
++We added a different line in the other copy
 </pre>
 </div>
 </div>
@@ -15711,10 +15646,26 @@ Date:   Wed May 11 17:59:31 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git add mars.txt
+<div class=" highlight hl-bash"><pre><span></span>git log
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span>git add mars.txt
 </pre></div>
 
      </div>
@@ -15727,10 +15678,10 @@ Date:   Wed May 11 17:59:31 2022 +0200
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git status
+<div class=" highlight hl-bash"><pre><span></span>git status
 </pre></div>
 
      </div>
@@ -15757,7 +15708,7 @@ Your branch is up to date with &#39;origin/main&#39;.
 
 Changes to be committed:
   (use &#34;git restore --staged &lt;file&gt;...&#34; to unstage)
-	<span class="ansi-green-fg">modified:   mars.txt</span>
+	modified:   mars.txt
 
 </pre>
 </div>
@@ -15772,10 +15723,10 @@ Changes to be committed:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git commit -m <span class="s2">&quot;Add a line in my copy&quot;</span>
+<div class=" highlight hl-bash"><pre><span></span>git commit -m <span class="s2">&quot;Add a line in my copy&quot;</span>
 </pre></div>
 
      </div>
@@ -15797,7 +15748,7 @@ Changes to be committed:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[main e2d74b7] Add a line in my copy
+<pre>[main 66ffefa] Add a line in my copy
  1 file changed, 1 insertion(+)
 </pre>
 </div>
@@ -15812,10 +15763,10 @@ Changes to be committed:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git push origin main
+<div class=" highlight hl-bash"><pre><span></span>git push origin main
 </pre></div>
 
      </div>
@@ -15838,14 +15789,25 @@ Changes to be committed:
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>To github.com:zdshaoteach/test.git
- <span class="ansi-red-fg">! [rejected]       </span> main -&gt; main (fetch first)
-<span class="ansi-red-fg">error: failed to push some refs to &#39;github.com:zdshaoteach/test.git&#39;
-</span><span class="ansi-yellow-fg">hint: Updates were rejected because the remote contains work that you do</span>
-<span class="ansi-yellow-fg">hint: not have locally. This is usually caused by another repository pushing</span>
-<span class="ansi-yellow-fg">hint: to the same ref. You may want to first integrate the remote changes</span>
-<span class="ansi-yellow-fg">hint: (e.g., &#39;git pull ...&#39;) before pushing again.</span>
-<span class="ansi-yellow-fg">hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.</span>
+ ! [rejected]        main -&gt; main (fetch first)
+error: failed to push some refs to &#39;github.com:zdshaoteach/test.git&#39;
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
 </pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre></pre>
 </div>
 </div>
 
@@ -15864,6 +15826,94 @@ Changes to be committed:
 </div>
 </div>
 </div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span>git log
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span>git pull origin main
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace &#34;git config&#34; with &#34;git config --global&#34; to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+remote: Enumerating objects: 5, done.        
+remote: Counting objects: 100% (5/5), done.        
+remote: Compressing objects: 100% (2/2), done.        
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0        
+Unpacking objects: 100% (3/3), 294 bytes | 147.00 KiB/s, done.
+From github.com:zdshaoteach/test
+ * branch            main       -&gt; FETCH_HEAD
+   72eb8f9..457975f  main       -&gt; origin/main
+Auto-merging mars.txt
+CONFLICT (content): Merge conflict in mars.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre></pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15872,290 +15922,7 @@ Changes to be committed:
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git log
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">commit e2d74b7fbe97123450feeae21d43279c3c3f6b61</span><span class="ansi-yellow-fg"> (</span><span class="ansi-cyan-intense-fg ansi-bold">HEAD -&gt; </span><span class="ansi-green-intense-fg ansi-bold">main</span><span class="ansi-yellow-fg">)</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 18:50:45 2022 +0200
-
-    Add a line in my copy
-
-<span class="ansi-yellow-fg">commit 11fc4facdead9cca65884bad058e2f24260426bd</span><span class="ansi-yellow-fg"> (</span><span class="ansi-red-intense-fg ansi-bold">origin/main</span><span class="ansi-yellow-fg">, </span><span class="ansi-red-intense-fg ansi-bold">origin/HEAD</span><span class="ansi-yellow-fg">)</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 18:41:38 2022 +0200
-
-    Add notes about Pluto
-
-<span class="ansi-yellow-fg">commit fcce3db60590ff4e0cf9e8a15c66c2575d8605d3</span>
-Author: zdshaoteach &lt;zdshao.teach@gmail.com&gt;
-Date:   Wed May 11 17:59:31 2022 +0200
-
-    first commit
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git pull origin main
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">hint: Pulling without specifying how to reconcile divergent branches is</span>
-<span class="ansi-yellow-fg">hint: discouraged. You can squelch this message by running one of the following</span>
-<span class="ansi-yellow-fg">hint: commands sometime before your next pull:</span>
-<span class="ansi-yellow-fg">hint: </span>
-<span class="ansi-yellow-fg">hint:   git config pull.rebase false  # merge (the default strategy)</span>
-<span class="ansi-yellow-fg">hint:   git config pull.rebase true   # rebase</span>
-<span class="ansi-yellow-fg">hint:   git config pull.ff only       # fast-forward only</span>
-<span class="ansi-yellow-fg">hint: </span>
-<span class="ansi-yellow-fg">hint: You can replace &#34;git config&#34; with &#34;git config --global&#34; to set a default</span>
-<span class="ansi-yellow-fg">hint: preference for all repositories. You can also pass --rebase, --no-rebase,</span>
-<span class="ansi-yellow-fg">hint: or --ff-only on the command line to override the configured default per</span>
-<span class="ansi-yellow-fg">hint: invocation.</span>
-remote: Enumerating objects: 5, done.
-remote: Counting objects: 100% (5/5), done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), 375 bytes | 187.00 KiB/s, done.
-From github.com:zdshaoteach/test
- * branch            main       -&gt; FETCH_HEAD
-   11fc4fa..64513cc  main       -&gt; origin/main
-Auto-merging mars.txt
-CONFLICT (content): Merge conflict in mars.txt
-Automatic merge failed; fix conflicts and then commit the result.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-We added a different line in the other copy
-=======
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 64513cc99fa6407577cd169f0aa777ec9ccfe248
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git config pull.rebase false
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git pull origin main
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>error: Pulling is not possible because you have unmerged files.
-<span class="ansi-yellow-fg">hint: Fix them up in the work tree, and then use &#39;git add/rm &lt;file&gt;&#39;</span>
-<span class="ansi-yellow-fg">hint: as appropriate to mark resolution and make a commit.</span>
-fatal: Exiting because of an unresolved conflict.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-We added a different line in the other copy
-=======
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 64513cc99fa6407577cd169f0aa777ec9ccfe248
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nb">echo</span> <span class="s2">&quot;Cold and dry, but everything is my favorite color \n</span><span class="err">\</span>
-<span class="n">We</span> <span class="n">added</span> <span class="n">a</span> <span class="n">different</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">other</span> <span class="n">copy</span> \<span class="n">n</span>\
-<span class="n">The</span> <span class="n">two</span> <span class="n">moons</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">problem</span> <span class="k">for</span> <span class="n">Wolfman</span> \<span class="n">n</span>\
-<span class="n">But</span> <span class="n">the</span> <span class="n">Mummy</span> <span class="n">will</span> <span class="n">appreciate</span> <span class="n">the</span> <span class="n">lack</span> <span class="n">of</span> <span class="n">humidity</span> \<span class="n">n</span><span class="s2">&quot; &gt; mars.txt</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -16178,6 +15945,14 @@ But the Mummy will appreciate the lack of humidity
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+We added a different line in the other copy
+=======
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 457975f1d94ada06c3ecdaa8b585dee83d2983c7
 </pre>
 </div>
 </div>
@@ -16186,16 +15961,31 @@ But the Mummy will appreciate the lack of humidity
 
 </div>
 
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span>git config pull.rebase <span class="nb">false</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git add mars.txt
-<span class="o">!</span>git commit -m <span class="s2">&quot;resolve conflicts&quot;</span>
+<div class=" highlight hl-bash"><pre><span></span>git pull origin main
 </pre></div>
 
      </div>
@@ -16217,8 +16007,22 @@ But the Mummy will appreciate the lack of humidity
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[main 49e5dc7] resolve conflicts
+<pre>error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use &#39;git add/rm &lt;file&gt;&#39;
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
 </pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre></pre>
 </div>
 </div>
 
@@ -16231,10 +16035,10 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git push origin main
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -16256,14 +16060,175 @@ But the Mummy will appreciate the lack of humidity
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Enumerating objects: 10, done.
-Counting objects: 100% (10/10), done.
+<pre>Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+We added a different line in the other copy
+=======
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 457975f1d94ada06c3ecdaa8b585dee83d2983c7
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Cold and dry, but everything is my favorite color</span>
+<span class="s2">We added a different line in the other copy</span>
+<span class="s2">The two moons may be a problem for Wolfman</span>
+<span class="s2">But the Mummy will appreciate the lack of humidity</span>
+<span class="s2">The two moons may be a problem for Wolfman</span>
+<span class="s2">But the Mummy will appreciate the lack of humidity</span>
+<span class="s2">We added a different line in the other copy</span>
+<span class="s2">The two moons may be a problem for Wolfman</span>
+<span class="s2">But the Mummy will appreciate the lack of humidity&quot;</span> &gt; mars.txt
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Cold and dry, but everything is my favorite color
+We added a different line in the other copy
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+We added a different line in the other copy
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span>git add mars.txt
+git commit -m <span class="s2">&quot;resolve conflicts&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[main bfad560] resolve conflicts
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+ rewrite mars.txt (100%)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-bash"><pre><span></span>git push origin main
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 773 bytes | 257.00 KiB/s, done.
-Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 321 bytes | 160.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.        
 To github.com:zdshaoteach/test.git
-   64513cc..49e5dc7  main -&gt; main
+   b4fa934..bfad560  main -&gt; main
 </pre>
 </div>
 </div>
@@ -16288,10 +16253,10 @@ To github.com:zdshaoteach/test.git
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_folder</span><span class="p">)</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/workshop/planets
 </pre></div>
 
      </div>
@@ -16304,10 +16269,10 @@ To github.com:zdshaoteach/test.git
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
+<div class=" highlight hl-bash"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 
      </div>
@@ -16343,10 +16308,10 @@ To github.com:zdshaoteach/test.git
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -16369,6 +16334,12 @@ To github.com:zdshaoteach/test.git
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Cold and dry, but everything is my favorite color
+We added a different line in the other copy
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+We added a different line in the other copy
 The two moons may be a problem for Wolfman
 But the Mummy will appreciate the lack of humidity
 </pre>
@@ -16384,10 +16355,10 @@ But the Mummy will appreciate the lack of humidity
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git pull origin main
+<div class=" highlight hl-bash"><pre><span></span>git pull origin main
 </pre></div>
 
      </div>
@@ -16409,30 +16380,21 @@ But the Mummy will appreciate the lack of humidity
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre><span class="ansi-yellow-fg">hint: Pulling without specifying how to reconcile divergent branches is</span>
-<span class="ansi-yellow-fg">hint: discouraged. You can squelch this message by running one of the following</span>
-<span class="ansi-yellow-fg">hint: commands sometime before your next pull:</span>
-<span class="ansi-yellow-fg">hint: </span>
-<span class="ansi-yellow-fg">hint:   git config pull.rebase false  # merge (the default strategy)</span>
-<span class="ansi-yellow-fg">hint:   git config pull.rebase true   # rebase</span>
-<span class="ansi-yellow-fg">hint:   git config pull.ff only       # fast-forward only</span>
-<span class="ansi-yellow-fg">hint: </span>
-<span class="ansi-yellow-fg">hint: You can replace &#34;git config&#34; with &#34;git config --global&#34; to set a default</span>
-<span class="ansi-yellow-fg">hint: preference for all repositories. You can also pass --rebase, --no-rebase,</span>
-<span class="ansi-yellow-fg">hint: or --ff-only on the command line to override the configured default per</span>
-<span class="ansi-yellow-fg">hint: invocation.</span>
-remote: Enumerating objects: 10, done.
-remote: Counting objects: 100% (10/10), done.
-remote: Compressing objects: 100% (6/6), done.
-Unpacking objects: 100% (6/6), 753 bytes | 83.00 KiB/s, done.
-remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+<pre>hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace &#34;git config&#34; with &#34;git config --global&#34; to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
 From github.com:zdshaoteach/test
  * branch            main       -&gt; FETCH_HEAD
-   64513cc..49e5dc7  main       -&gt; origin/main
-Updating 64513cc..49e5dc7
-Fast-forward
- mars.txt | 4 <span class="ansi-green-fg">+</span><span class="ansi-red-fg">---</span>
- 1 file changed, 1 insertion(+), 3 deletions(-)
+Already up to date.
 </pre>
 </div>
 </div>
@@ -16446,10 +16408,10 @@ Fast-forward
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat mars.txt
+<div class=" highlight hl-bash"><pre><span></span>cat mars.txt
 </pre></div>
 
      </div>
@@ -16471,29 +16433,21 @@ Fast-forward
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cold and dry, but everything is my favorite color \n We added a different line in the other copy \n The two moons may be a problem for Wolfman \n But the Mummy will appreciate the lack of humidity \n
+<pre>Cold and dry, but everything is my favorite color
+We added a different line in the other copy
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
+We added a different line in the other copy
+The two moons may be a problem for Wolfman
+But the Mummy will appreciate the lack of humidity
 </pre>
 </div>
 </div>
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div></section></section>
