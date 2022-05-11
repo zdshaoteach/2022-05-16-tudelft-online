@@ -6,6 +6,8 @@
 - [etherpad for notes](https://pad.carpentries.org/2022-05-16-tudelft-online)
 - [python course website](https://swcarpentry.github.io/python-novice-inflammation/)
 - [git course website](https://swcarpentry.github.io/git-novice/)
+- [github repo (Doris)](https://github.com/zdshaoteach/2022-05-16-tudelft-online)
+- [slides for python-II and git](https://zdshaoteach.github.io/2022-05-16-tudelft-online)
 
 
 ## python episodes
