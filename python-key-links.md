@@ -7,7 +7,7 @@ lesson 07
 
 lesson 08
 
-- [https://zdshaoteach.github.io/2022-05-16-tudelft-online/python-08.slides.html#/1]()
+- [https://zdshaoteach.github.io/2022-05-16-tudelft-online/python-08.slides.html#/1](https://zdshaoteach.github.io/2022-05-16-tudelft-online/python-08.slides.html#/1)
 
 lesson 09
 
@@ -17,7 +17,7 @@ lesson 09
 lesson 10
  
 reuse example in lesson 09, use the correct version, add assert statement
-- [[https://zdshaoteach.github.io/2022-05-16-tudelft-online/python-09.slides.html#/2/1]([https://zdshaoteach.github.io/2022-05-16-tudelft-online/python-09.slides.html#/2/1)
+- [https://zdshaoteach.github.io/2022-05-16-tudelft-online/python-09.slides.html#/2/1](https://zdshaoteach.github.io/2022-05-16-tudelft-online/python-09.slides.html#/2/1)
 
 lesson 11
 
